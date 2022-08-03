@@ -1,0 +1,64 @@
+body {
+  font-family: "Roboto Slab", serif;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.card > .content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255 255 255 / 38%);
+}
+
+.card > img,
+.card > .content {
+  transition: 200ms ease-in-out;
+}
+
+.card > content.fade {
+  opacity: 0;
+}
+.card:hover > .content.fade {
+  opacity: 1;
+}
+.card:hover > img.blur {
+  filter: blur(1px);
+}
+
+.card:hover > img.zoom {
+  transform: scale(1.1);
+}
+.card > div.slide-right {
+  transform: translateX(700px);
+}
+.card:hover > div.slide-right {
+  transform: translateX(0);
+}
+.card > .content.slide-left {
+  transform: translateY(-700px);
+}
+.card:hover > .content.slide-left {
+  transform: translateY(0);
+}
